@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Трекер бюджету</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+</head>
+<body>
+<h1>Трекер бюджету</h1>
+<h4 id="add">Скоріше додавайте транзакції!</h4>
+
+<button id="help_btn" class="help-btn">Допомога</button>
+
+<div id="modal_help" class="modal">
+  <div class="modal-content">
+    <span class="close_help">&times;</span>
+    
+    <p>Допомога</p>
+    <p>
+      Привіт! Невеличка інструкція для Вас щодо користування програмою. Після входу на сторінку, у правому нижньому куті є кнопка "+", 
+      що відповідає за додавання транзакції. Натиснувши на неї, перед Вами з'явиться модальне вікно, де потрібно внести всі необхідні дані,
+      а саме суму (можна набрати вручну, а можна вибрати, натискаючи збоку поля на стрілки вверх/вниз), дату (обрати з календаря), категорію
+      (обрати з випадаючого списку) і обов'язково обрати, до якого типу належить транзакція: "витрати" чи "доходи". Натиснувши кнопку "Зберегти",
+      Ви побачите перед собою табличку із внесеними даними. Якщо Ви обрали категорію "Інше", то в табличці в колонці категорії з'явиться
+      випадаючий список, де Ви можете обрати підкатегорію, яка Вам найбільше підходить. Також Ви можете посортувати записи за категорією або
+      за типом. Для цього необхідно натиснути на заголовок "Категорія" або "Тип". Також Ви можете видалити рядок назавжди, якщо він Вам не потрібний.
+      Якщо Ви бажаєте виділити дані за періодом, можете скористатися фільтром. Потрібно вказати початкову та кінцеву дату та натиснути "Пошук".
+      Перед Вами з'явиться табличка або не з'явиться нічого, якщо за вказаний період не було записів. Якщо Вам потрібний звіт, збережений на Вашому
+      пристрої, то ви можете згенерувати дані, натиснувши на кнопку "Експорт". У результаті Ви отримаєте txt-файл. Також Ви можете зберегти табличку
+      із записами, натиснувши кнопку "Зберегти", щоб потім, коли потрібно, переглянути її на цій же сторінці, натиснувши кнопку "Показати".
+      Успіхів Вам! Сподіваюся користування буде приємним!
+    </p>
+
+  </div>
+</div>
+
+<button id="add_btn" class="add-btn">+</button>
+
+<div id="modal_add" class="modal">
+    <div class="modal-content">
+      <span class="close_add">&times;</span>
+
+      <form>
+        <p>Додати транзакцію</p>
+        <label for="amount">Сума:</label>
+        <input type="number" name="amount" id="amount" required>
+    
+        <label for="date">Дата:</label>
+        <input type="date" name="date" id="date" required>
+    
+        <label for="category">Категорія:</label>
+        <select name="category" id="category" required>
+            <option value="Оберіть категорію">Оберіть категорію</option>
+            <option value="Їжа">Їжа</option>
+            <option value="Одяг">Одяг</option>
+            <option value="Подорожі">Подорожі</option>
+            <option value="Розваги">Розваги</option>
+            <option value="Інше">Інше</option>
+        </select>
+
+        <label><input type="radio" name="option" value="витрати" required>Витрати</label>
+        <label><input type="radio" name="option" value="дохід" required>Дохід</label>
+
+        <input type="submit" id="save" value="Зберегти">
+      </form>
+
+    </div>
+</div>
+
+<button id="filter_btn" class="filter-btn">Фільтр</button>
+
+<div id="modal_filter" class="modal">
+  <div class="modal-content">
+    <span class="close_filter">&times;</span>
+    
+    <form id="filter_form">
+      <p>Фільтр</p>
+      <label for="start-date">Початкова дата:</label>
+      <input type="date" id="start-date" name="start-date">
+      
+      <label for="end-date">Кінцева дата:</label>
+      <input type="date" id="end-date" name="end-date">
+      
+      <input type="submit" id="search" value="Пошук">
+    </form>
+
+  </div>
+</div>
+
+<table id="expenses">
+  <thead>
+    <tr>
+      <th>Сума</th>
+      <th>Дата</th>
+      <th>Категорія</th>
+      <th>Тип</th>
+      <th>Дія</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Рядки для відображення даних про транзакції будуть додаватись програмно -->
+  </tbody>
+</table>
+
+<button id="generate_btn" class="generate-btn">Експорт</button>
+
+<button id="save_btn" class="save-btn" onclick="saveData()">Зберегти</button>
+<button id="show_btn" class="show-btn" onclick="showData()">Показати</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>

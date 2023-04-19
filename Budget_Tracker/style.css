@@ -1,0 +1,257 @@
+body {
+    background-image: url("background.jpg");
+    background-size: cover;
+    font-family: Georgia, sans-serif; 
+}
+
+h1, h4 {
+    font-family: Georgia, sans-serif;
+    font-style: italic; 
+}
+
+p {
+    font-family: Georgia, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;  
+}
+
+.help-btn {
+    width: 80px;
+    height: 50px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: deeppink;
+    font-weight: bold;
+    background-color: lightpink;
+    border: 2px solid deeppink;
+    border-radius: 10px;
+}
+
+.help-btn:hover {
+    background-color: plum;
+    cursor: pointer;
+}
+
+.close_help {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close_help:hover,
+.close_help:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.add-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: deeppink;
+    font-weight: bold;
+    background-color: lightpink;
+    border: 2px solid deeppink;
+}
+
+.add-btn:hover {
+    background-color: plum;
+    cursor: pointer;
+}
+
+.close_add {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close_add:hover,
+.close_add:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: ivory;
+    margin: 8% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    margin-bottom: 10px;
+    margin-right: 100px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+input[type="number"],
+input[type="date"] {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: black;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 16px;
+}
+
+select {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: black;
+    margin-bottom: 20px;
+    width: 105%;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    display: block;
+    background-color: lightpink;
+    color: black;
+    padding: 10px;
+    border-color: deeppink;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: palevioletred;
+}
+
+table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-spacing: 0;
+    box-sizing: border-box;
+}
+
+th {
+    background-color: #eee;
+    color: #333;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+td, th {
+    width: 8%;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.filter-btn {
+    width: 60px;
+    height: 62px;
+    position: absolute;
+    right: 10px;
+    color: deeppink;
+    font-weight: bold;
+    background-color: lightpink;
+    border: 2px solid darkcyan;
+    border-radius: 10px;
+}
+
+.filter-btn:hover {
+    background-color: plum;
+    cursor: pointer;
+}
+
+.close_filter {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close_filter:hover,
+.close_filter:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.generate-btn {
+    width: 80px;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+    color: deeppink;
+    font-weight: bold;
+    background-color: lightpink;
+    border: 2px solid deeppink;
+    border-radius: 10px;
+}
+
+.generate-btn:hover {
+    background-color: plum;
+    cursor: pointer;
+}
+
+.save-btn {
+    width: 80px;
+    height: 50px;
+    position: absolute;
+    right: 100px;
+    color: deeppink;
+    font-weight: bold;
+    background-color: lightpink;
+    border: 2px solid deeppink;
+    border-radius: 10px;
+}
+
+.save-btn:hover {
+    background-color: plum;
+    cursor: pointer;
+}
+
+.show-btn {
+    width: 80px;
+    height: 50px;
+    position: absolute;
+    right: 190px;
+    color: deeppink;
+    font-weight: bold;
+    background-color: lightpink;
+    border: 2px solid deeppink;
+    border-radius: 10px;
+}
+
+.show-btn:hover {
+    background-color: plum;
+    cursor: pointer;
+}
