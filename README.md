@@ -1,1 +1,15 @@
-# Eleks_Practice_BudgetTracker
+Budget tracker (new)
+Estimate - 60h (90h with additional challenges)
+Створити програму яка дозволяє відслідковувати особистйи бюджет і зберігати дані про витрати та 
+доходи. 
+- Додавати записи в стилі надходження/витрати
+- Категоризація записів (теги/підкатегорії)
+- Можливість виділяти дані за періодом за місяць/пів року/рік
+- (Додатково)Можливість генерувати звіти по різним періодам
+- (Додатково) Зробити можливість відслідковувати сімейний бюджет (декілька користувачів).
+Дані повинні зберігатись в базі даних.
+
+![image](https://user-images.githubusercontent.com/56317020/233191072-0aa64bd7-bd70-47a6-9111-9da8682821e0.png)
+![image](https://user-images.githubusercontent.com/56317020/233191390-56f89e5b-9d67-424b-9af2-469b5282bcf6.png)
+![image](https://user-images.githubusercontent.com/56317020/233191503-1ab0d95e-08dd-422b-9886-4e8a251588f6.png)
+![image](https://user-images.githubusercontent.com/56317020/233191672-88038ffd-fbcb-4f5e-855e-040663ac5f74.png)
